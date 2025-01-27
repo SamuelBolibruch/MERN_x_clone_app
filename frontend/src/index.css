@@ -1,55 +1,18 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+  themes: black --default;
 }
+
 @plugin "daisyui/theme" {
   name: "black";
   default: false; /* Táto téma nie je predvolená */
-  prefersdark: true; /* Nie je predvolená v dark móde */
+  prefersdark: true; /* Predvolená v dark móde */
   color-scheme: dark; /* Nastavenie farby UI prehliadača */
-
-  --color-base-100: rgb(24, 24, 24);
-  --color-base-200: rgb(34, 34, 34);
-  --color-base-300: rgb(45, 45, 45);
-  --color-base-content: rgb(255, 255, 255);
 
   --color-primary: rgb(29, 155, 240);
   --color-primary-content: rgb(255, 255, 255);
 
   --color-secondary: rgb(24, 24, 24);
   --color-secondary-content: rgb(200, 200, 200);
-
-  --color-accent: rgb(55, 55, 55);
-  --color-accent-content: rgb(240, 240, 240);
-
-  --color-neutral: rgb(50, 50, 50);
-  --color-neutral-content: rgb(255, 255, 255);
-
-  --color-info: rgb(85, 155, 240);
-  --color-info-content: rgb(255, 255, 255);
-
-  --color-success: rgb(50, 205, 100);
-  --color-success-content: rgb(255, 255, 255);
-
-  --color-warning: rgb(240, 190, 50);
-  --color-warning-content: rgb(40, 40, 40);
-
-  --color-error: rgb(240, 50, 50);
-  --color-error-content: rgb(255, 255, 255);
-
-  /* Border radius */
-  --radius-selector: 1rem;
-  --radius-field: 0.25rem;
-  --radius-box: 0.5rem;
-
-  /* Base sizes */
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-
-  /* Border size */
-  --border: 1px;
-
-  /* Effects */
-  --depth: 1;
-  --noise: 0;
 }
