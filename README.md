@@ -44,7 +44,7 @@ This is a **Twitter/X Clone** application designed to emulate the core functiona
 
 ### User Profile
 
-![User Profile](frontend/public/x_app_3.pngpng)
+![User Profile](frontend/public/x_app_3.png)
 
 ### Notifications
 
