@@ -12,10 +12,9 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { formatMemberSinceDate } from "../../utils/date";
 import useFollow from "../../hooks/useFollow";
-import toast from "react-hot-toast";
 import useUpdateUserProfile from "../../hooks/useUpdateUserProfile";
 
 const ProfilePage = () => {
@@ -29,7 +28,6 @@ const ProfilePage = () => {
   const { username } = useParams();
 
   const { follow, isPending } = useFollow();
-  const queryClient = useQueryClient();
   const { data: authUser } = useQuery({ queryKey: ["authUser"] });
 
   const {
@@ -188,12 +186,12 @@ const ProfilePage = () => {
                       <>
                         <FaLink className="w-3 h-3 text-slate-500" />
                         <a
-                          href="https://youtube.com/@asaprogrammer_"
+                          href={user.link}
                           target="_blank"
                           rel="noreferrer"
                           className="text-sm text-blue-500 hover:underline"
                         >
-                          youtube.com/@asaprogrammer_
+                          {user.link}
                         </a>
                       </>
                     </div>
